@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import MovieCard from "./MovieCard"
+import Loading from "./Loading";
 
 // css
 import './style.css'
@@ -21,6 +22,7 @@ const Home = () => {
 
             if (responseJson.Search) {
                 setMovieList(responseJson.Search);
+                console.log(movieList)
             }
         };
 
@@ -30,6 +32,8 @@ const Home = () => {
     const handleInput = (name) => {
         setSearch(name)
     }
+
+
     return (
         <div className="mainwrapper">
             {/* navbar */}
@@ -41,6 +45,7 @@ const Home = () => {
                 <div className="searchbar">
                     <input type="text"
                         placeholder='Type movie name'
+                        value={search}
                         onChange={(e) => handleInput(e.target.value)}
                     />
                 </div>
@@ -49,6 +54,7 @@ const Home = () => {
             {/* movielist */}
 
             <div className="movielist">
+
                 {
                     movieList &&
                     movieList.map(movie => (
@@ -57,6 +63,7 @@ const Home = () => {
                             title={movie.Title}
                             type={movie.Type}
                             year={movie.Year}
+                            rating={movie.imdbID}
                         />
                     ))
                 }

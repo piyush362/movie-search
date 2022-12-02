@@ -32,6 +32,12 @@
     margin-top: 40px;
 }
 
+.loading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 @media screen and (max-width: 480px) {
     .navbar{
         flex-direction: column;
