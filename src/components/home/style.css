@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+.navbar{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+}
+.nav-logo{
+    display: flex;
+    align-items: center;
+}
+.nav-logo > img{
+    height: 80px;
+}
+.searchbar > input{
+    width: 200px;
+    height: 10px;
+    padding: 10px;
+}
+.movielist{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+@media screen and (max-width: 480px) {
+    .navbar{
+        flex-direction: column;
+        padding-bottom: 20px;
+    }
+    .searchbar > input{
+        border: 2px solid black;
+        border-radius: 10px;
+    }
+    .movielist {
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+  }
