@@ -10,19 +10,21 @@ const Home = () => {
     const [movieList, setMovieList] = useState([]);
     const [search, setSearch] = useState('');
 
-    const getMovieRequest = async (search) => {
-        const url = `http://www.omdbapi.com/?s=${search}&apikey=263d22d8`;
 
-        const response = await fetch(url);
-        const responseJson = await response.json();
-
-        if (responseJson.Search) {
-            setMovieList(responseJson.Search);
-            console.log(movieList)
-        }
-    };
 
     useEffect(() => {
+        const getMovieRequest = async (search) => {
+            const url = `http://www.omdbapi.com/?s=${search}&apikey=263d22d8`;
+
+            const response = await fetch(url);
+            const responseJson = await response.json();
+
+            if (responseJson.Search) {
+                setMovieList(responseJson.Search);
+                console.log(movieList)
+            }
+        };
+
         getMovieRequest(search);
     }, [search]);
 
