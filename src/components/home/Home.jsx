@@ -8,7 +8,7 @@ const Home = () => {
 
 
     const [movieList, setMovieList] = useState([]);
-    const [search, setSearch] = useState('');
+    const [search, setSearch] = useState('spider');
 
 
 
