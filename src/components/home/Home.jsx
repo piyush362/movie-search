@@ -1,12 +1,11 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
 import MovieCard from "./MovieCard"
 
 // css
 import './style.css'
 
 const Home = () => {
-    const url = 'https://www.omdbapi.com/?i=tt3896198&apikey=22ca5e24'
+
 
     const [movieList, setMovieList] = useState([]);
     const [search, setSearch] = useState('');
