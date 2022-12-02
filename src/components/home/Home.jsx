@@ -21,7 +21,6 @@ const Home = () => {
 
             if (responseJson.Search) {
                 setMovieList(responseJson.Search);
-                console.log(movieList)
             }
         };
 
