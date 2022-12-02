@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import MovieCard from "./MovieCard"
-import Loading from "./Loading";
+// import Loading from "./Loading";
 
 // css
 import './style.css'
@@ -22,7 +22,7 @@ const Home = () => {
 
             if (responseJson.Search) {
                 setMovieList(responseJson.Search);
-                console.log(movieList)
+                // console.log(movieList)
             }
         };
 
