@@ -41,6 +41,7 @@ const Home = () => {
                 <div className="searchbar">
                     <input type="text"
                         placeholder='Type movie name'
+                        value={search}
                         onChange={(e) => handleInput(e.target.value)}
                     />
                 </div>
